@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sports Home</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #1a1a1a;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ffcc00;
+    }
+
+    .header {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: #1a1a1a;
+      margin-bottom: 20px;
+    }
+
+    .header h1 {
+      font-size: 36px;
+      margin: 10px 0;
+      color: #ffcc00;
+    }
+
+    .header p {
+      font-size: 18px;
+      color: #ccc;
+    }
+
+    .category-buttons {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      justify-items: center;
+      padding: 50px;
+    }
+
+    .category-button {
+      width: 300px;
+      height: 150px;
+      padding: 15px;
+      background-size: cover;
+      background-position: center;
+      color: gold;
+      border-radius: 12px;
+      font-size: 0.9em;
+      cursor: pointer;
+      text-align: center;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      transition: all 0.3s ease;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .category-button:hover {
+      background-color: rgba(244, 162, 97, 0.8);
+      box-shadow: 0px 12px 20px gold;
+      transform: scale(1.1);
+      transition: all 0.3s ease;
+    }
+    .soccer-button {
+      background-image: url('https://i.etsystatic.com/38852001/r/il/1ad00e/4540995816/il_570xN.4540995816_7i3u.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .basketball-button {
+      background-image: url('https://dt5602vnjxv0c.cloudfront.net/portals/11786/images/gyb%20basketball%202.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .golf-button {
+      background-image: url('https://media.istockphoto.com/id/1454927838/photo/golf-ball-on-tee-in-the-evening-golf-course-with-sunshine-background.jpg?s=612x612&w=0&k=20&c=JVPWL390168anp8roB3Y8pChxj1-cCe1_mAg9OeoC3E=');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .badminton-button {
+      background-image: url('https://t3.ftcdn.net/jpg/03/10/62/12/360_F_310621281_foEqKBGtGlNWFQRePgdF5BpLOFyTsnzO.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .rugby-button {
+      background-image: url('https://atlas-content-cdn.pixelsquid.com/stock-images/rugby-ball-5A0aDrA-600.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .footer {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .footer p {
+            font-size: 16px;
+        }
+
+        .footer .services {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .footer .services div {
+            text-align: center;
+        }
+
+        .footer .contact-details {
+            font-size: 14px;
+        }
+
+        .footer .contact-details a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+
+    /* Floating Add Button */
+    .add-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #ffcc00;
+      color: #000;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+
+    .add-button:hover {
+      background-color: #e6b800;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">LOGO</div>
+  </div>
+
+  <div class="header">
+    <h1>Welcome to the Rental Hub</h1>
+    <p>Your one-stop destination for renting Furniture, Electronics, Cars, and more!</p>
+  </div>
+
+  <!-- Buttons for Furniture Categories -->
+  <div class="category-buttons">
+    <a href="soccer.php" class="category-button soccer-button"><span>Soccer</span></a>
+    <a href="basketball.php" class="category-button basketball-button"><span>BasketBall</span></a>
+    <a href="golf.php" class="category-button golf-button"><span>Golf</span></a>
+    <a href="badminton.php" class="category-button badminton-button"><span>Badminton</span></a>
+    <a href="rugby.php" class="category-button rugby-button"><span>Rugby</span></a>
+  </div>
+
+  <!-- Add Button -->
+  <button class="add-button" onclick="location.href='add-product.php'">+</button>
+
+  <div class="footer">
+    <div class="services">
+      <div>
+        <h3>Services</h3>
+        <p><a href="furniture.html" style="text-decoration: none; color: inherit;">Furniture Rentals</a></p>
+        <p><a href="#electronics-rentals" style="text-decoration: none; color: inherit;">Electronics Rentals</a></p>
+        <p><a href="#vehicle-rentals" style="text-decoration: none; color: inherit;">Vehicle Rentals</a></p>
+        <p><a href="#sports-equipment-rentals" style="text-decoration: none; color: inherit;">Sports Equipment Rentals</a></p>
+        <p><a href="#fitness-rentals" style="text-decoration: none; color: inherit;">Fitness Rentals</a></p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p><a href="mailto:vinuthnakumarmaxzen08.com" style="text-decoration: none; color: inherit;">Email: vinuthnakumarmaxzen08.com</a></p>
+        <p><a href="tel:+919014908994" style="text-decoration: none; color: inherit;">Phone: +91 9014908994</a></p>
+      </div>
+    </div>
+    <div class="contact-details">
+      <p>&copy; 2024 Rental Hub. All Rights Reserved.</p>
+    </div>
+  </div>
+</body>
+</html>

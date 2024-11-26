@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chairs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: gold;
+    }
+    header {
+      background-color: #004aad;
+      color: gold;
+      text-align: center;
+      padding: 20px;
+    }
+    header h1 {
+      margin: 0;
+    }
+    .product-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    .product {
+      background-color: #333;
+      border: 1px solid #f4a261;
+      width: calc(25% - 40px); /* Adjusted for 4 products per row, subtracting margin/padding */
+      margin-bottom: 20px;
+      border-radius: 12px;
+      color: gold;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+    .product:hover {
+      transform: scale(1.05);
+      background-color: #444;
+    }
+    .product img {
+      width: 100%;
+      height: 200px; /* Adjust according to image aspect ratio */
+      object-fit: cover;
+    }
+    .product h2 {
+      margin: 10px 0;
+    }
+    .product p {
+      padding: 10px;
+      font-size: 1.1em;
+    }
+    .rating {
+      color: gold;
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+    .rating span {
+      margin: 0 2px;
+    }
+    .product-button {
+      background-color: #004aad;
+      padding: 10px;
+      border: none;
+      color: gold;
+      font-size: 1.2em;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      transition: background-color 0.3s ease;
+    }
+    .product-button:hover {
+      background-color: #e76f51;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Chairs Collection</h1>
+  </header>
+
+  <!-- Product Display Container -->
+  <div class="product-container">
+    <!-- Product 1 -->
+    <div class="product">
+      <img src="C:/xampp/htdocs/rental app/chair.jpg" alt="Chair 1">
+      <h2>Modern Chair</h2>
+      <p>Comfortable chair with a stylish design, perfect for your living room or office.</p>
+      <div class="price">$179.99</div> <!-- Price -->
+      <!-- Rating -->
+      <div class="rating">
+        <span>&#9733;</span> <span>&#9733;</span> <span>&#9733;</span> <span>&#9733;</span> <span>&#9734;</span> <!-- 4/5 rating -->
+      </div>
+      <button class="product-button">View Product</button>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product">
+      <img src="C:/xampp/htdocs/rental app/chair2.jpg" alt="Chair 2">
+      <h2>Luxury Chair</h2>
+      <p>Elegant chair with premium upholstery for maximum comfort.</p>
+      <div class="price">$179.99</div> <!-- Price -->
+      <!-- Rating -->
+      <div class="rating">
+        <span>&#9733;</span> <span>&#9733;</span> <span>&#9733;</span> <span>&#9734;</span> <span>&#9734;</span> <!-- 3/5 rating -->
+      </div>
+      <button class="product-button">View Product</button>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product">
+      <img src="C:/xampp/htdocs/rental app/chair3.jpg" alt="Chair 3">
+      <h2>Reclining Chair</h2>
+      <p>Relax in this reclining chair designed for ultimate comfort and support.</p>
+      <div class="price">$179.99</div> <!-- Price -->
+      <!-- Rating -->
+      <div class="rating">
+        <span>&#9733;</span> <span>&#9733;</span> <span>&#9733;</span> <span>&#9733;</span> <span>&#9733;</span> <!-- 5/5 rating -->
+      </div>
+      <button class="product-button">View Product</button>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product">
+      <img src="C:/xampp/htdocs/rental app/chair4.jpg" alt="Chair 4">
+      <h2>Eco-friendly Chair</h2>
+      <p>Sustainable design with eco-friendly materials, perfect for any space.</p>
+      <div class="price">$179.99</div> <!-- Price -->
+      <!-- Rating -->
+      <div class="rating">
+        <span>&#9733;</span> <span>&#9733;</span> <span>&#9733;</span> <span>&#9734;</span> <span>&#9734;</span> <!-- 3/5 rating -->
+      </div>
+      <button class="product-button">View Product</button>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="product">
+      <img src="C:/xampp/htdocs/rental app/chair5.jpg" alt="Chair 5">
+      <h2>Classic Chair</h2>
+      <p>A timeless chair that fits into any living room or office environment.</p>
+      <div class="price">$179.99</div> <!-- Price -->
+      <!-- Rating -->
+      <div class="rating">
+        <span>&#9733;</span> <span>&#9733;</span> <span>&#9734;</span> <span>&#9734;</span> <span>&#9734;</span> <!-- 2/5 rating -->
+      </div>
+      <button class="product-button">View Product</button>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="product">
+      <img src="C:/xampp/htdocs/rental app/chair6.jpg" alt="Chair 6">
+      <h2>Office Chair</h2>
+      <p>Ergonomic office chair designed for comfort and productivity during long hours.</p>
+      <div class="price">$179.99</div> <!-- Price -->
+      <!-- Rating -->
+      <div class="rating">
+        <span>&#9733;</span> <span>&#9733;</span> <span>&#9733;</span> <span>&#9734;</span> <span>&#9734;</span> <!-- 3/5 rating -->
+      </div>
+      <button class="product-button">View Product</button>
+    </div>
+
+    <!-- Product 7 -->
+    <div class="product">
+      <img src="C:/xampp/htdocs/rental app/chair7.jpg" alt="Chair 7">
+      <h2>Comfortable Lounge Chair</h2>
+      <p>Perfect chair for relaxing and lounging in any room.</p>
+      <div class="price">$179.99</div> <!-- Price -->
+      <!-- Rating -->
+      <div class="rating">
+        <span>&#9733;</span> <span>&#9733;</span> <span>&#9733;</span> <span>&#9733;</span> <span>&#9734;</span> <!-- 4/5 rating -->
+      </div>
+      <button class="product-button">View Product</button>
+    </div>
+
+    <!-- Product 8 -->
+    <div class="product">
+      <img src="C:/xampp/htdocs/rental app/chair8.jpg" alt="Chair 8">
+      <h2>Dining Chair</h2>
+      <p>Elegant dining chair to complement your dining table set.</p>
+      <div class="price">$179.99</div> <!-- Price -->	  
+      <!-- Rating -->
+      <div class="rating">
+        <span>&#9733;</span> <span>&#9733;</span> <span>&#9734;</span> <span>&#9734;</span> <span>&#9734;</span> <!-- 2/5 rating -->
+      </div>
+      <button class="product-button">View Product</button>
+    </div>
+  </div>
+
+</body>
+</html>

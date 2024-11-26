@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electronics</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: gold;
+    }
+    header {
+      background-color: black;
+      color: gold;
+      text-align: center;
+      padding: 20px;
+    }
+    header h1 {
+      margin: 0;
+    }
+    .product-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    .product {
+      background-color: #333;
+      border: 1px solid #f4a261;
+      width: calc(20% - 40px); /* Adjusted for 5 products per row */
+      margin-bottom: 20px;
+      border-radius: 12px;
+      color: gold;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+    .product:hover {
+      transform: scale(1.05);
+      background-color: #444;
+    }
+    .product img {
+      width: 100%;
+      height: 200px; /* Adjust according to image aspect ratio */
+      object-fit: cover;
+    }
+    .product h2 {
+      margin: 10px 0;
+    }
+    .product p {
+      padding: 10px;
+      font-size: 1.1em;
+    }
+    .price {
+      font-size: 1.2em;
+      font-weight: bold;
+      padding: 10px;
+    }
+    .rating {
+      color: gold;
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+    .rating span {
+      margin: 0 2px;
+    }
+    .product-button {
+      background-color: #004aad;
+      padding: 10px;
+      border: none;
+      color: gold;
+      font-size: 1.2em;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      transition: background-color 0.3s ease;
+    }
+    .product-button:hover {
+      background-color: #e76f51;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Electronics Collection</h1>
+  </header>
+
+  <!-- Product Display Container -->
+  <div class="product-container">
+    <!-- Product 1 -->
+    <div class="product">
+      <img src="C:/xampp/htdocs/rental app/laptop1.jpg" alt="Laptop">
+      <h2>Modern Laptop</h2>
+      <p>High-performance laptop for work and entertainment.</p>
+      <div class="price">$999.99</div>
+      <div class="rating">
+        <span>&#9733;</span> <span>&#9733;</span> <span>&#9733;</span> <span>&#9733;</span> <span>&#9734;</span>
+      </div>
+      <button class="product-button">View Product</button>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product">
+      <img src="C:/xampp/htdocs/rental app/phone1.jpg" alt="Smartphone">
+      <h2>Latest Smartphone</h2>
+      <p>Top-tier smartphone with cutting-edge technology.</p>
+      <div class="price">$799.99</div>
+      <div class="rating">
+        <span>&#9733;</span> <span>&#9733;</span> <span>&#9733;</span> <span>&#9734;</span> <span>&#9734;</span>
+      </div>
+      <button class="product-button">View Product</button>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product">
+      <img src="C:/xampp/htdocs/rental app/tv.jpg" alt="Television">
+      <h2>4K UHD TV</h2>
+      <p>Enjoy immersive viewing with stunning 4K resolution.</p>
+      <div class="price">$599.99</div>
+      <div class="rating">
+        <span>&#9733;</span> <span>&#9733;</span> <span>&#9733;</span> <span>&#9733;</span> <span>&#9733;</span>
+      </div>
+      <button class="product-button">View Product</button>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product">
+      <img src="C:/xampp/htdocs/rental app/watch2.jpg" alt="Smartwatch">
+      <h2>Smartwatch</h2>
+      <p>Track your fitness and stay connected with this sleek smartwatch.</p>
+      <div class="price">$199.99</div>
+      <div class="rating">
+        <span>&#9733;</span> <span>&#9733;</span> <span>&#9733;</span> <span>&#9734;</span> <span>&#9734;</span>
+      </div>
+      <button class="product-button">View Product</button>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="product">
+      <img src="C:/xampp/htdocs/rental app/headset.jpg" alt="Headphones">
+      <h2>Noise Headphones</h2>
+      <p>Enjoy high-quality sound and noise cancellation for a better listening experience.</p>
+      <div class="price">$299.99</div>
+      <div class="rating">
+        <span>&#9733;</span> <span>&#9733;</span> <span>&#9733;</span> <span>&#9733;</span> <span>&#9734;</span>
+      </div>
+      <button class="product-button">View Product</button>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="product">
+      <img src="C:/xampp/htdocs/rental app/tablet.jpeg" alt="Tablet">
+      <h2>Tablet</h2>
+      <p>Perfect for work, play, and creativity with an ultra-responsive touchscreen.</p>
+      <div class="price">$399.99</div>
+      <div class="rating">
+        <span>&#9733;</span> <span>&#9733;</span> <span>&#9733;</span> <span>&#9734;</span> <span>&#9734;</span>
+      </div>
+      <button class="product-button">View Product</button>
+    </div>
+
+    <!-- Product 7 -->
+    <div class="product">
+      <img src="C:/xampp/htdocs/rental app/camera.jpg" alt="Camera">
+      <h2>Digital Camera</h2>
+      <p>Capture stunning photos with this high-resolution digital camera.</p>
+      <div class="price">$499.99</div>
+      <div class="rating">
+        <span>&#9733;</span> <span>&#9733;</span> <span>&#9733;</span> <span>&#9733;</span> <span>&#9733;</span>
+      </div>
+      <button class="product-button">View Product</button>
+    </div>
+
+    <!-- Product 8 -->
+    <div class="product">
+      <img src="C:/xampp/htdocs/rental app/speaker.jpg" alt="Speaker">
+      <h2>Wireless Speaker</h2>
+      <p>Enjoy clear, powerful sound with this portable wireless speaker.</p>
+      <div class="price">$129.99</div>
+      <div class="rating">
+        <span>&#9733;</span> <span>&#9733;</span> <span>&#9733;</span> <span>&#9734;</span> <span>&#9734;</span>
+      </div>
+      <button class="product-button">View Product</button>
+    </div>
+  </div>
+
+</body>
+</html>

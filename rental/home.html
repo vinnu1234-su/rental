@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #1a1a1a;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffcc00;
+        }
+
+        .login-signup {
+            padding: 10px 20px;
+            background-color: #ffcc00;
+            color: #000;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .header {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #1a1a1a;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            margin: 10px 0;
+            color: #ffcc00;
+        }
+
+        .header p {
+            font-size: 18px;
+            color: #ccc;
+        }
+
+        .banner {
+            margin: 20px;
+            text-align: center;
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .banner img {
+            max-width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .banner h1 {
+            font-size: 30px;
+            margin: 20px 0;
+            color: #ffcc00;
+        }
+
+        .banner .btn {
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .categories {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .category {
+            position: relative;
+            width: 19%;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+            text-align: center;
+            border: 1px solid #333;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 250px;
+        }
+
+        .category:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(255, 204, 0, 0.7);
+        }
+
+        @keyframes slideShow {
+            0%, 20% { opacity: 1; }
+            25%, 100% { opacity: 0; }
+        }
+
+        .category img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+
+        .category img:first-child {
+            opacity: 1;
+        }
+
+        .category-name {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 18px;
+            color: #ffcc00;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .about-us {
+    background: #333;
+    padding: 40px 20px;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Enhanced shadow effect */
+    width: 80%;
+    max-width: 800px;
+    margin: 40px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added hover transition */
+}
+
+.about-us:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 20px 50px rgba(255, 204, 0, 0.7); /* Highlighted shadow effect */
+}
+
+
+        .about-us h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #ffcc00;
+        }
+
+        .about-us p {
+            font-size: 18px;
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        .footer {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .footer p {
+            font-size: 16px;
+        }
+
+        .footer .services {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .footer .services div {
+            text-align: center;
+        }
+
+        .footer .contact-details {
+            font-size: 14px;
+        }
+
+        .footer .contact-details a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .category {
+                width: 23%;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .category {
+                width: 48%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .category {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">LOGO</div>
+        <a href="login.html" class="login-signup">Login/Signup</a>
+    </div>
+
+    <div class="header">
+        <h1>Welcome to the Rental Hub</h1>
+        <p>Your one-stop destination for renting Furniture, Electronics, Cars, and more!</p>
+    </div>
+
+    <div class="banner">
+        <img src="image.jpg" alt="Banner Image">
+        <h1>Turn referrals into a DREAM GETAWAY!</h1>
+        <button class="btn">Know More</button>
+    </div>
+
+    <div class="categories">
+        <a href="login.html" class="category" id="furniture">
+            <img src="https://www.alankaram.in/wp-content/uploads/2022/12/A7402720-2048x1365-1.jpg" alt="Furniture Image 1">
+            <img src="https://thesleepcompany.in/cdn/shop/files/Artboard_1_copy_21_200x_118d56ec-04c7-4bc6-9f83-c4a1ff143fbb.webp?v=1729507662&width=1445" alt="Furniture Image 2">
+            <img src="https://thesleepcompany.in/cdn/shop/files/Artboard_1_copy_30_200x_d69ec8ec-3552-4b82-9476-e8ae2c076863.webp?v=1729509294&width=1445" alt="Furniture Image 1">
+            <div class="category-name">Furniture</div>
+        </a>
+        <a href="login.html" class="category" id="cars">
+            <img src="https://www.ktmindia.com/-/media/ktm/ktm-bikes-webp/ktm-rc/ktm-rc-adv/new-card/rc390_3pm.webp?iar=0&hash=C1ACF2E7CC80597FE0B0C19E16E74241" alt="Cars Image 1">
+            <img src="https://static.vecteezy.com/system/resources/previews/023/192/562/non_2x/sport-car-running-on-the-road-in-future-city-created-with-generative-ai-free-photo.jpg" alt="Cars Image 2">
+            <img src="https://www.jojotravel.in/assets/images/services/scooty-on-rent-in-jaipur.jpg" alt="Cars Image 2">
+            <div class="category-name">Bike/Cars</div>
+        </a>
+        <a href="login.html" class="category" id="electronics">
+            <img src="https://www.schott.com/-/media/project/onex/shared/teasers/consumer-electronics/consumer-electronics_01-displays_00_720x450.jpg?rev=fe6df7a508644a7d8e294e6c294a317b" alt="Electronics Image 1">
+            <img src="https://s.alicdn.com/@sc04/kf/H397d59c139654ede872dd0d99a91392b5.jpg_720x720q50.jpg" alt="Electronics Image 1">
+            <img src="https://images.hindustantimes.com/tech/img/2024/04/24/1600x900/LG_ArtCool_AC_launched_1713944970796_1713944970938.PNG" alt="Electronics Image 2">
+            <div class="category-name">Appliances</div>
+        </a>
+        <a href="login.html" class="category" id="tools">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNYmwFod64GlhuR1yo-dWQEFMs4IMDsP3IOw&s" alt="Tools Image 1">
+            <img src="https://m.media-amazon.com/images/I/71hLbftSOQL.jpg" alt="Tools Image 1">
+            <img src="https://total-play.co.uk/wp-content/uploads/2023/01/Domestic-NTP-Install-4.jpg" alt="Tools Image 2">
+            <div class="category-name">Sports</div>
+        </a>
+        <a href="login.html" class="category" id="clothing">
+            <img src="https://www.rentomojo.com/public/images/category/package-bg/1-bhk-new.webp" alt="Clothing Image 1">
+            <img src="https://www.rentomojo.com/public/images/category/package-bg/1-bhk-new.webp" alt="Clothing Image 1">
+            <img src="https://www.rentomojo.com/public/images/category/package-bg/1-bhk-new.webp" alt="Clothing Image 2">
+            <div class="category-name">Apartments</div>
+        </a>
+    </div>
+    
+
+    <div class="about-us">
+        <h2>About Us</h2>
+        <p>We are a leading rental service provider, offering a wide variety of items for rent. Our mission is to make renting easy, affordable, and accessible for everyone.</p>
+    </div>
+
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <div class="services">
+            <div>
+                <h3>Services</h3>
+                <p>Furniture Rentals</p>
+                <p>Electronics Rentals</p>
+                <p>Vehicle Rentals</p>
+                <p>Sports Equipment Rentals</p>
+                <p>Fitness Rentals</p>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <p>Email: vinuthnakumarmaxzen08.com</p>
+                <p>Phone: +91 9014908994</p>
+            </div>
+        </div>
+        <div class="contact-details">
+            <p>&copy; 2024 Rental Hub. All Rights Reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.category').forEach(category => {
+            let images = category.querySelectorAll('img');
+            let currentIndex = 0;
+
+            setInterval(() => {
+                images[currentIndex].style.opacity = 0;
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].style.opacity = 1;
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
